@@ -1,0 +1,27 @@
+
+// 默认主题
+$default-theme : (
+  base-color: #ddd,
+  border-color: #000,
+  font-color:white,
+);
+//红色主题
+$red-theme : (
+  base-color: red,
+  border-color: red,
+  font-color:blue,
+
+);
+//定义映射集合
+$themes: (
+  default-theme: $default-theme,
+  red-theme: $red-theme
+);
+@mixin base-background(){
+    @each $themename , $theme in $themes {
+        [data-theme = '#{$themename}'] & {
+            background: map-get($map: $theme, $key: base-color );
+            color: map-get($map: $theme, $key: font-color );
+        }
+    }
+}
