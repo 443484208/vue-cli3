@@ -4,7 +4,6 @@ import router from './router'
 import store from './vuex'
 import hy from "vue-hy"
 import VueOccupy from 'vue-occupy'
-import  './axios'
 Vue.use(hy);
 Vue.use(VueOccupy);
 Vue.config.productionTip = false;

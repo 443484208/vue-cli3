@@ -20,17 +20,18 @@
 			}
 		},
 		mounted() {
-			console.log(this.$ajax);
-			
-			
-			
-			
+			console.log(this);
 			// Tinymce.init({
 			// 	selector: '.editor1'
 			// })
 			// Tinymce.init({
 			// 	selector: '.editor2'
 			// })
-		}
+		},
+		watch: {
+			content(newValue, oldValue) {
+				console.log(newValue)
+			}
+		},
 	}
 </script>
